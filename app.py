@@ -1,6 +1,6 @@
 import dash_bootstrap_components as dbc
 import plotly.express as px
-from dash import Dash, dcc
+from dash import Dash, html, dcc, Input, Output
 
 
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
