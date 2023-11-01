@@ -42,10 +42,10 @@ app.layout = html.Div([
         ]
     ),
     dcc.Tabs([
-        dcc.Tab(label='Tab one', children=[
+        dcc.Tab(label='Time Trend', children=[
             dcc.Graph(id='line-plot')
         ]),
-        dcc.Tab(label='Tab two', children=[
+        dcc.Tab(label='Customers & Locations', children=[
             dbc.Container([
                 dbc.Row([
                     dbc.Col(
@@ -181,7 +181,7 @@ def updata_store_data(store):
         kmart_width = "240px"
     kmart_color = "white"
     if kmart_discount != "Same Centre":
-        kmart_color = "orange"
+        kmart_color = "skyblue"
         
     target_discount = str(store_df["distance_to_target"].values[0])
     target_width = "240px"
@@ -195,7 +195,7 @@ def updata_store_data(store):
         target_width = "240px"
     target_color = "white"
     if target_discount != "Same Centre":
-        target_color = "orange"
+        target_color = "skyblue"
     
     woolworth = store_df["co_location_flag"].values[0]
     woolworth_str = "✓"
